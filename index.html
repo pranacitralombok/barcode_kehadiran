@@ -3,53 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+  <title>Absensi MBG</title>
   <style>
-    /* 1️⃣ Hapus margin dan padding global, kunci tinggi penuh */
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden; /* hilangkan scroll utama */
-      background: #f0f0f0;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeSpeed;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #2563eb;
+      color: white;
+      font-family: sans-serif;
+      flex-direction: column;
+      text-align: center;
     }
-
-    /* 2️⃣ Iframe full-screen ringan & responsif */
-    iframe {
-      position: fixed; /* fixed lebih cepat render dibanding absolute */
-      inset: 0; /* ganti top, left, right, bottom: 0 */
-      width: 100%;
-      height: 100%;
+    button {
+      background: white;
+      color: #2563eb;
       border: none;
-      outline: none;
-      background: transparent;
-      overflow-y: auto;
-      overflow-x: hidden;
-      scroll-behavior: smooth; /* scrolling halus di perangkat sentuh */
-      will-change: transform; /* beri hint ke GPU untuk percepat render */
-      transform: translateZ(0); /* aktifkan GPU acceleration */
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.2s;
     }
-
-    /* 3️⃣ Sembunyikan scrollbar halus tanpa ganggu performa */
-    iframe::-webkit-scrollbar {
-      width: 8px;
-      background: transparent;
+    button:hover {
+      background: #e2e8f0;
     }
   </style>
 </head>
 <body>
-  <iframe
-    src="https://script.google.com/macros/s/AKfycbzW14D67qes4e8UiphrtKVDQ_qtBnBEZpbGzZE4fh28R3eXu-88yMZ76bQT21CH_qnv/exec"
-    title="Form Absensi MBG"
-    loading="eager"   <!-- segera dimuat -->
-    referrerpolicy="no-referrer"
-    sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
-    allowtransparency="true">
-  </iframe>
+  <h2>Form Kehadiran MBG</h2>
+  <p>Klik tombol di bawah untuk membuka formulir kehadiran.</p>
+  <button onclick="window.location.href='https://script.google.com/macros/s/AKfycbzW14D67qes4e8UiphrtKVDQ_qtBnBEZpbGzZE4fh28R3eXu-88yMZ76bQT21CH_qnv/exec'">
+    Buka Form Kehadiran
+  </button>
 </body>
 </html>
-
-
-
